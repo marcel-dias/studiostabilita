@@ -23,6 +23,13 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
     <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+
+    <style>
+#map {
+height: 400px;
+width: 100%;
+}
+</style>
 	</head>
 	<body class="homepage">
 		<div id="page-wrapper">
@@ -155,8 +162,13 @@
 			<!-- Footer -->
 				<div id="footer">
 					<div class="container">
+            <div class="row">
+              <div class="8u 12u(mobile)">
+                <div id="map" ></div>
+              </div>
+            </div>
 						<div class="row">
-							<div class="8u 12u(mobile)">
+							<div class="12u 12u(mobile)">
 								<!-- Contact -->
 									<section class="contact" id="contato">
 										<header>
@@ -211,6 +223,19 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
-
+      <script>
+      function initMap() {
+        var uluru = {lat: -29.6778836, lng: -51.0539832};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 18,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB8BB3oSdZ4QnYeAy3KD1JV4UMj340ShJw&callback=initMap" async defer></script>
 	</body>
 </html>
