@@ -139,7 +139,7 @@
               <p></p>
             </header>
             <div class="row">
-              <article class="6u 12u(mobile) special">
+              <article class="4u 12u(mobile) special">
                 <a href="#" class="image centered"><img src="assets/img/gabriela.jpg" alt="Gabriela Silvano" /></a>
                 <header>
                   <h3>Gabriela Silvano</h3>
@@ -154,7 +154,7 @@
                 </p>
               </article>
 
-              <article class="6u 12u(mobile) special">
+              <article class="4u 12u(mobile) special">
                 <a href="#" class="image centered"><img src="assets/img/marcelo.jpg" alt="Marcelo Schilling" /></a>
                 <header>
                   <h3>Marcelo Schilling</h3>
@@ -166,7 +166,22 @@
                   e Gerente de operações Médicas nos Jogos Olímpicos Rio 2016.
                   Agora é responsável pelos atendimentos fisioterapêuticos e Treinamento Funcional no Studio Stabilitá.
                 </p>
-              </article>
+			  </article>
+			  
+			  <article class="4u 12u(mobile) special">
+                <a href="#" class="image centered"><img src="assets/img/carol.jpg" alt="Ana Carolina Lenhardt" /></a>
+                <header>
+                  <h3>Ana Carolina Lenhardt</h3>
+                </header>
+                <p>
+					Graduada em Fisioterapia pela Universidade do Vale do Rio dos Sinos (UNISINOS) em 2018.
+					Formação no Método Pilates Clássico desde 2015.
+					Formação em Reiki I, II e III desde 2013.
+					Habilitação em Tecnologias Avançadas em Estética e Cosmética Facial e Corporal desde 2016.
+					Curso de Fisioterapia Manual em Tecidos Cicatriciais (Avaliação, Prevenção e Tratamento
+					de Fibroses, Cicatrizes e Aderências) | 2019
+                </p>
+			  </article>
             </div>
           </section>
         </div>
@@ -185,36 +200,37 @@
 										<ul class="icons">
 											<li><a href="https://www.facebook.com/studiostabilita" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
 											<li><a href="https://www.instagram.com/studiostabilita" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
-										</ul>
-                    <p>
-                      <a href="maps:?q=-29.6778836,-51.0539832,5" >Rua Emilio Willibaldo Kayser, 155 - Sala 102 - Centro, Campo Bom - RS</a>
-                    </p>
-                    <p>
-                      <a href="tel:5133997116">Telefone: 51 3399-7116</a>&nbsp&nbsp|&nbsp&nbsp<a href="tel:51980208062">Celular: 51 980-208-062</a>
-                    </p>
+										</ul>	
+										<p>
+											<div id="map"></div>
+											<a href="maps:?q=-29.6778836,-51.0539832,5" >Rua Emilio Willibaldo Kayser, 155 - Sala 102 - Centro, Campo Bom - RS</a>
+										</p>
+										<p>
+											<a href="tel:5133997116">Telefone: 51 3399-7116</a>&nbsp&nbsp|&nbsp&nbsp<a href="tel:51980208062">Celular: 51 980-208-062</a>
+										</p>
 									</section>
-							</div>
-              <div class="4u 12u(mobile)">
-                <form class="feedback" action="https://formspree.io/studiostabilita@gmail.com" method="POST">
-                  <input type="text" name="name" placeholder="Nome">
-                  <input type="email" name="_replyto" placeholder="Seu email" >
-                  <textarea name="comment" placeholder="Seu comentário" ></textarea>
-                  <input class="button" type="submit" value="Send">
-                </form>
-              </div>
+								</div>
+								<div class="4u 12u(mobile)">
+									<form class="feedback" action="https://formspree.io/studiostabilita@gmail.com" method="POST">
+									<input type="text" name="name" placeholder="Nome">
+									<input type="email" name="_replyto" placeholder="Seu email" >
+									<textarea name="comment" placeholder="Seu comentário" ></textarea>
+									<input class="button" type="submit" value="Send">
+									</form>
+								</div>
 						</div>
-            <div class="row">
-              <div class="12u 12u(mobile)">
-              <!-- Copyright -->
-                <div class="copyright">
-                  <ul class="menu">
-                    <li>&copy; Studio Stabilitá. Todos direitos reservados.</li>
-                    <li>By: <a href="http://marceldias.com">Marcel Dias</a></li>
-                    <li>Theme: <a href="https://html5up.net/helios">HTML5 UP Helios</a></li>
-                  </ul>
-                </div>
-              </div>
-            </div>
+						<div class="row">
+						<div class="12u 12u(mobile)">
+						<!-- Copyright -->
+							<div class="copyright">
+							<ul class="menu">
+								<li>&copy; Studio Stabilitá. Todos direitos reservados.</li>
+								<li>By: <a href="https://www.linkedin.com/in/marceldias">Marcel Dias</a></li>
+								<li>Theme: <a href="https://html5up.net/helios">HTML5 UP Helios</a></li>
+							</ul>
+							</div>
+						</div>
+						</div>
 					</div>
 				</div>
 		</div>
@@ -228,6 +244,25 @@
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+			<script>
+				// Initialize and add the map
+				function initMap() {
+					// The location of Uluru
+					var uluru = {lat: -25.344, lng: 131.036};
+					// The map, centered at Uluru
+					var map = new google.maps.Map(
+						document.getElementById('map'), {zoom: 4, center: uluru});
+					// The marker, positioned at Uluru
+					var marker = new google.maps.Marker({position: uluru, map: map});
+				}
+			</script>
+			<!--Load the API from the specified URL
+			* The async attribute allows the browser to render the page while the API loads
+			* The key parameter will contain your own API key (which is not needed for this tutorial)
+			* The callback parameter executes the initMap() function
+			-->
+			<script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap">
+			</script>
 
 	</body>
 </html>
