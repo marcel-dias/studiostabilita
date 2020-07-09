@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,300italic,400,400italic,600");
+@import url("fontawesome-all.min.css");
 /*
 	Helios by HTML5 UP
 	html5up.net | @ajlkn
@@ -1830,10 +1832,10 @@
 	ul.icons {
 		position: relative;
 		background: rgba(128, 128, 128, 0.05);
-		border-radius: 4em;
+		border-radius: 1em;
 		display: inline-block;
-		padding: 0.35em 0.75em 0.35em 0.75em;
-		font-size: 1.25em;
+		padding: 0.1em 0.1em 0.1em 0.1em;
+		font-size: 2em;
 		cursor: default;
 	}
 
@@ -1841,21 +1843,21 @@
 			display: inline-block;
 		}
 
-			ul.icons li a {
-				display: inline-block;
-				background: none;
-				width: 2.5em;
-				height: 2.5em;
-				line-height: 2.5em;
-				text-align: center;
-				border-radius: 100%;
-				border: 0;
-				color: inherit;
-			}
+		ul.icons li a {
+			display: inline-block;
+			background: none;
+			width: 1em;
+			height: 1em;
+			line-height: 1em;
+			text-align: center;
+			border-radius: 100%;
+			border: 0;
+			color: inherit;
+		}
 
-				ul.icons li a:hover {
-					color: #ef8376;
-				}
+		ul.icons li a:hover {
+			color: #874B78;
+		}
 
 	ol.default {
 		list-style: decimal;
@@ -2383,16 +2385,16 @@
 		margin-bottom: 0;
 	}
 
-		#main section:first-of-type {
-			padding-top: 2em;
-		}
+	#main section:first-of-type {
+		padding-top: 2em;
+	}
 
 /* Footer */
 
 	#footer {
 		position: relative;
 		overflow: hidden;
-		padding: 6em 0 2em 0;
+		padding: 2em 0 2em 0;
 		background: rgba(50, 135, 145, 0.85);
 		color: #fff;
 	}
@@ -2415,10 +2417,14 @@
 			text-align: center;
 		}
 
-			#footer .contact p {
-				text-align: center;
-				margin: 0 0 3em 0;
-			}
+		#footer .contact p {
+			text-align: center;
+			margin: 0 0 1em 0;
+		}
+	
+		#footer .social {
+			text-align: center;
+		}
 
     #footer .feedback input[type="submit"] {
       float: right;
@@ -2437,6 +2443,11 @@
 
 			#footer .copyright a:hover {
 				color: rgba(222, 222, 222, 0.85);
+			}
+
+			#map {
+				height: 400px;  /* The height is 400 pixels */
+				width: 100%;  /* The width is the width of the web page */
 			}
 
 /* Carousel */
@@ -2713,7 +2724,7 @@
 				}
 
 			.row > section, .row > article {
-				margin-bottom: 2em;
+				margin-bottom: 1em;
 			}
 
 			header > p {
